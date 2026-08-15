@@ -61,20 +61,7 @@
   .explorer::-webkit-scrollbar-track{background:var(--bg-panel);}
 
   /* ---------- editable text affordance ---------- */
-  [contenteditable="true"]{
-    outline:none;
-    border-radius:2px;
-    cursor:text;
-    transition:box-shadow .15s ease, background .15s ease;
-  }
-  [contenteditable="true"]:hover{
-    box-shadow:0 0 0 1px dashed var(--accent-blue);
-    box-shadow:inset 0 0 0 1px var(--accent-blue-dim);
-  }
-  [contenteditable="true"]:focus{
-    box-shadow:inset 0 0 0 1px var(--accent-blue);
-    background:rgba(0,162,255,0.06);
-  }
+  /* editing disabled: no hover/focus affordance needed */
 
   :focus-visible{outline:2px solid var(--accent-blue);outline-offset:2px;}
 
@@ -447,7 +434,7 @@
   <div class="shell">
     <aside class="explorer">
       <div class="explorer-label">Explorer</div>
-      <div class="explorer-hint">// click text or images anywhere to edit, then hit Publish to save your file</div>
+      <div class="explorer-hint">// this page is read-only</div>
       <div class="tree-item"><span class="tree-dot"></span>Workspace</div>
       <div class="tree-item indent1"><span class="tree-dot tree-dot-model"></span>ZenPortfolio</div>
       <div class="tree-item node indent2" data-target="hero"><svg class="tree-icon" viewBox="0 0 20 20"><path d="M3 9.5L10 4l7 5.5M5 8.5V16h10V8.5"></path></svg>Hero</div>
@@ -472,12 +459,12 @@
           </div>
           <div>
             <div class="hero-select-tag">‹ Selected: 1 Instance ›</div>
-            <h1 class="hero-name" contenteditable="true" spellcheck="false">ZEN</h1>
+            <h1 class="hero-name" contenteditable="false" spellcheck="false">ZEN</h1>
             <span class="class-chip">UIDesigner</span>
-            <p class="hero-tagline" contenteditable="true" spellcheck="false">I design GUIs, menus, HUDs and shop systems that make Roblox games feel like finished products, not prototypes.</p>
+            <p class="hero-tagline" contenteditable="false" spellcheck="false">I design GUIs, menus, HUDs and shop systems that make Roblox games feel like finished products, not prototypes.</p>
             <div class="hero-badges">
-              <span class="badge"><svg viewBox="0 0 20 20"><path d="M11 2L4 11h5l-1 7 8-10h-5z"></path></svg><span contenteditable="true" spellcheck="false">Experience: 2 Years</span></span>
-              <span class="badge"><span class="status-dot"></span><span contenteditable="true" spellcheck="false">Available for hire</span></span>
+              <span class="badge"><svg viewBox="0 0 20 20"><path d="M11 2L4 11h5l-1 7 8-10h-5z"></path></svg><span contenteditable="false" spellcheck="false">Experience: 2 Years</span></span>
+              <span class="badge"><span class="status-dot"></span><span contenteditable="false" spellcheck="false">Available for hire</span></span>
             </div>
             <div class="hero-actions">
               <a href="#projects" class="btn btn-primary" data-target="projects"><svg viewBox="0 0 20 20"><rect x="3" y="3" width="6" height="6" rx="1"></rect><rect x="11" y="3" width="6" height="6" rx="1"></rect><rect x="3" y="11" width="6" height="6" rx="1"></rect><rect x="11" y="11" width="6" height="6" rx="1"></rect></svg>View Projects</a>
@@ -493,27 +480,27 @@
         <div class="prop-table">
           <div class="prop-row">
             <div class="prop-key">Name</div>
-            <div class="prop-val" contenteditable="true" spellcheck="false">Zen</div>
+            <div class="prop-val" contenteditable="false" spellcheck="false">Zen</div>
           </div>
           <div class="prop-row">
             <div class="prop-key">Class</div>
-            <div class="prop-val" contenteditable="true" spellcheck="false">UI Designer<div><br></div></div>
+            <div class="prop-val" contenteditable="false" spellcheck="false">UI Designer<div><br></div></div>
           </div>
           <div class="prop-row">
             <div class="prop-key">Experience</div>
-            <div class="prop-val" contenteditable="true" spellcheck="false">2 Years</div>
+            <div class="prop-val" contenteditable="false" spellcheck="false">2 Years</div>
           </div>
           <div class="prop-row">
             <div class="prop-key">Specialization</div>
-            <div class="prop-val" contenteditable="true" spellcheck="false">Roblox Studio UI,&nbsp; Menus, HUDs, Shop &amp; Inventory UI's</div>
+            <div class="prop-val" contenteditable="false" spellcheck="false">Roblox Studio UI,&nbsp; Menus, HUDs, Shop &amp; Inventory UI's</div>
           </div>
           <div class="prop-row">
             <div class="prop-key">Status</div>
-            <div class="prop-val"><span class="status-dot"></span><span contenteditable="true" spellcheck="false">Available for hire / freelance</span></div>
+            <div class="prop-val"><span class="status-dot"></span><span contenteditable="false" spellcheck="false">Available for hire / freelance</span></div>
           </div>
           <div class="prop-row full">
             <div class="prop-key">Description</div>
-            <div class="prop-val" contenteditable="true" spellcheck="false"><div>I've spent the last two years designing UI in Roblox Studio, from shops and inventories to HUDs and menus. I currently specialize in <strong data-start="133" data-end="163">Stud-style and cartoony UI.</strong></div></div>
+            <div class="prop-val" contenteditable="false" spellcheck="false"><div>I've spent the last two years designing UI in Roblox Studio, from shops and inventories to HUDs and menus. I currently specialize in <strong data-start="133" data-end="163">Stud-style and cartoony UI.</strong></div></div>
           </div>
         </div>
       </section>
@@ -523,28 +510,28 @@
         <h2 class="section-title">Skills</h2>
         <div class="skills-table">
           <div class="skill-row">
-            <span class="skill-name" contenteditable="true" spellcheck="false">GUI &amp; Menu Design</span>
-            <span class="level-pill level-advanced" contenteditable="true" spellcheck="false">Advanced</span>
+            <span class="skill-name" contenteditable="false" spellcheck="false">GUI &amp; Menu Design</span>
+            <span class="level-pill level-advanced" contenteditable="false" spellcheck="false">Advanced</span>
           </div>
           <div class="skill-row">
-            <span class="skill-name" contenteditable="true" spellcheck="false">HUD Design</span>
-            <span class="level-pill level-advanced" contenteditable="true" spellcheck="false">Advanced</span>
+            <span class="skill-name" contenteditable="false" spellcheck="false">HUD Design</span>
+            <span class="level-pill level-advanced" contenteditable="false" spellcheck="false">Advanced</span>
           </div>
           <div class="skill-row">
-            <span class="skill-name" contenteditable="true" spellcheck="false">UIStroke / UIGradient Styling</span>
-            <span class="level-pill level-advanced" contenteditable="true" spellcheck="false">Advanced</span>
+            <span class="skill-name" contenteditable="false" spellcheck="false">UIStroke / UIGradient Styling</span>
+            <span class="level-pill level-advanced" contenteditable="false" spellcheck="false">Advanced</span>
           </div>
           <div class="skill-row">
-            <span class="skill-name" contenteditable="true" spellcheck="false">Icon &amp; Asset Design</span>
-            <span class="level-pill level-intermediate" contenteditable="true" spellcheck="false">Intermediate</span>
+            <span class="skill-name" contenteditable="false" spellcheck="false">Icon &amp; Asset Design</span>
+            <span class="level-pill level-intermediate" contenteditable="false" spellcheck="false">Intermediate</span>
           </div>
           <div class="skill-row">
-            <span class="skill-name" contenteditable="true" spellcheck="false">Shop &amp; Inventory Systems</span>
-            <span class="level-pill level-intermediate" contenteditable="true" spellcheck="false">Intermediate</span>
+            <span class="skill-name" contenteditable="false" spellcheck="false">Shop &amp; Inventory Systems</span>
+            <span class="level-pill level-intermediate" contenteditable="false" spellcheck="false">Intermediate</span>
           </div>
           <div class="skill-row">
-            <span class="skill-name" contenteditable="true" spellcheck="false">Prototyping (Figma)</span>
-            <span class="level-pill level-growing" contenteditable="true" spellcheck="false">Growing</span>
+            <span class="skill-name" contenteditable="false" spellcheck="false">Prototyping (Figma)</span>
+            <span class="level-pill level-growing" contenteditable="false" spellcheck="false">Growing</span>
           </div>
         </div>
       </section>
@@ -562,12 +549,12 @@
               <div class="slot-overlay">Click to change</div>
             </div>
             <div class="project-body">
-              <h3 class="project-title" contenteditable="true" spellcheck="false">Full Furniture Stud UI</h3>
-              <p class="project-desc" contenteditable="true" spellcheck="false">Full Stud UI (shop, furniture, settings, rebirth, index, changelogs, and more)</p>
+              <h3 class="project-title" contenteditable="false" spellcheck="false">Full Furniture Stud UI</h3>
+              <p class="project-desc" contenteditable="false" spellcheck="false">Full Stud UI (shop, furniture, settings, rebirth, index, changelogs, and more)</p>
               <div class="tag-row">
-                <span class="tag-chip" contenteditable="true" spellcheck="false">Frame</span>
-                <span class="tag-chip" contenteditable="true" spellcheck="false">UIGradient</span>
-                <span class="tag-chip" contenteditable="true" spellcheck="false">ImageButton</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">Frame</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">UIGradient</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">ImageButton</span>
               </div>
             </div>
           </article>
@@ -580,12 +567,12 @@
               <div class="slot-overlay">Click to change</div>
             </div>
             <div class="project-body">
-              <h3 class="project-title" contenteditable="true" spellcheck="false">A More Full Look at the Full Furniture Stud UI</h3>
-              <p class="project-desc" contenteditable="true" spellcheck="false">The Figma Project Showing the full furniture stud UI</p>
+              <h3 class="project-title" contenteditable="false" spellcheck="false">A More Full Look at the Full Furniture Stud UI</h3>
+              <p class="project-desc" contenteditable="false" spellcheck="false">The Figma Project Showing the full furniture stud UI</p>
               <div class="tag-row">
-                <span class="tag-chip" contenteditable="true" spellcheck="false">ScreenGui</span>
-                <span class="tag-chip" contenteditable="true" spellcheck="false">UIStroke</span>
-                <span class="tag-chip" contenteditable="true" spellcheck="false">TextLabel</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">ScreenGui</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">UIStroke</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">TextLabel</span>
               </div>
             </div>
           </article>
@@ -598,11 +585,11 @@
               <div class="slot-overlay">Click to change</div>
             </div>
             <div class="project-body">
-              <h3 class="project-title" contenteditable="true" spellcheck="false">Fun Recreations</h3>
-              <p class="project-desc" contenteditable="true" spellcheck="false">Sometimes, i recreate UI's from games to train myself to become a better UI Designer</p>
+              <h3 class="project-title" contenteditable="false" spellcheck="false">Fun Recreations</h3>
+              <p class="project-desc" contenteditable="false" spellcheck="false">Sometimes, i recreate UI's from games to train myself to become a better UI Designer</p>
               <div class="tag-row">
-                <span class="tag-chip" contenteditable="true" spellcheck="false">Frame</span>
-                <span class="tag-chip" contenteditable="true" spellcheck="false">Frame</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">Frame</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">Frame</span>
               </div>
             </div>
           </article>
@@ -615,11 +602,11 @@
               <div class="slot-overlay">Click to change</div>
             </div>
             <div class="project-body">
-              <h3 class="project-title" contenteditable="true" spellcheck="false">A Full Cashgrab UI</h3>
-              <p class="project-desc" contenteditable="true" spellcheck="false">I made a full cashgrab UI for myself to use when i create games, easy to use and i can change everything in studio easily.</p>
+              <h3 class="project-title" contenteditable="false" spellcheck="false">A Full Cashgrab UI</h3>
+              <p class="project-desc" contenteditable="false" spellcheck="false">I made a full cashgrab UI for myself to use when i create games, easy to use and i can change everything in studio easily.</p>
               <div class="tag-row">
-                <span class="tag-chip" contenteditable="true" spellcheck="false">Frame</span>
-                <span class="tag-chip" contenteditable="true" spellcheck="false">UiGradient</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">Frame</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">UiGradient</span>
               </div>
             </div>
           </article>
@@ -632,11 +619,11 @@
               <div class="slot-overlay">Click to change</div>
             </div>
             <div class="project-body">
-              <h3 class="project-title" contenteditable="true" spellcheck="false">W.I.P</h3>
-              <p class="project-desc" contenteditable="true" spellcheck="false">W.I.P</p>
+              <h3 class="project-title" contenteditable="false" spellcheck="false">W.I.P</h3>
+              <p class="project-desc" contenteditable="false" spellcheck="false">W.I.P</p>
               <div class="tag-row">
-                <span class="tag-chip" contenteditable="true" spellcheck="false">??</span>
-                <span class="tag-chip" contenteditable="true" spellcheck="false">??</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">??</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">??</span>
               </div>
             </div>
           </article>
@@ -649,11 +636,11 @@
               <div class="slot-overlay">Click to change</div>
             </div>
             <div class="project-body">
-              <h3 class="project-title" contenteditable="true" spellcheck="false">W.I.P</h3>
-              <p class="project-desc" contenteditable="true" spellcheck="false">W.I.P</p>
+              <h3 class="project-title" contenteditable="false" spellcheck="false">W.I.P</h3>
+              <p class="project-desc" contenteditable="false" spellcheck="false">W.I.P</p>
               <div class="tag-row">
-                <span class="tag-chip" contenteditable="true" spellcheck="false">??</span>
-                <span class="tag-chip" contenteditable="true" spellcheck="false">??</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">??</span>
+                <span class="tag-chip" contenteditable="false" spellcheck="false">??</span>
               </div>
             </div>
           </article>
@@ -665,10 +652,10 @@
         <div class="eyebrow">Output</div>
         <h2 class="section-title">Contact</h2>
         <div class="console">
-          <div class="console-line"><span class="console-tag">[INFO]</span><span class="console-key">Contact.Discord</span><span class="console-val">= "<span contenteditable="true" spellcheck="false">x6o1</span>"</span></div>
-          <div class="console-line"><span class="console-tag">[INFO]</span><span class="console-key">Contact.Email</span><span class="console-val">= "<a href="mailto:you@email.com" contenteditable="true" spellcheck="false">NOT AVAILABLE</a>"</span></div>
-          <div class="console-line"><span class="console-tag">[INFO]</span><span class="console-key">Contact.Roblox</span><span class="console-val">= "<span contenteditable="true" spellcheck="false">@Z_VBU</span>"</span></div>
-          <div class="console-line"><span class="console-tag">[INFO]</span><span class="console-key">Contact.Status</span><span class="console-val">= "<span contenteditable="true" spellcheck="false">Open to freelance &amp; collab work</span>"</span></div>
+          <div class="console-line"><span class="console-tag">[INFO]</span><span class="console-key">Contact.Discord</span><span class="console-val">= "<span contenteditable="false" spellcheck="false">x6o1</span>"</span></div>
+          <div class="console-line"><span class="console-tag">[INFO]</span><span class="console-key">Contact.Email</span><span class="console-val">= "<a href="mailto:you@email.com" contenteditable="false" spellcheck="false">NOT AVAILABLE</a>"</span></div>
+          <div class="console-line"><span class="console-tag">[INFO]</span><span class="console-key">Contact.Roblox</span><span class="console-val">= "<span contenteditable="false" spellcheck="false">@Z_VBU</span>"</span></div>
+          <div class="console-line"><span class="console-tag">[INFO]</span><span class="console-key">Contact.Status</span><span class="console-val">= "<span contenteditable="false" spellcheck="false">Open to freelance &amp; collab work</span>"</span></div>
           <div class="console-line"><span class="console-cursor"></span></div>
         </div>
       </section>
@@ -677,7 +664,7 @@
   </div>
 
   <footer class="statusbar">
-    <div class="statusbar-left"><span class="status-dot"></span><span contenteditable="true" spellcheck="false">Available for hire</span></div>
+    <div class="statusbar-left"><span class="status-dot"></span><span contenteditable="false" spellcheck="false">Available for hire</span></div>
     <div>Portfolio v1.0</div>
     <div>FPS: 60 &nbsp;•&nbsp; Ping: 12ms &nbsp;•&nbsp; Memory: 128MB</div>
   </footer>
@@ -721,47 +708,14 @@
 
   sections.forEach(s => observer.observe(s));
 
-  // ---------- image upload slots ----------
-  document.querySelectorAll('.img-slot').forEach(slot => {
-    const input = slot.querySelector('input[type="file"]');
-    const img = slot.querySelector('img');
-
-    const openPicker = () => input.click();
-    slot.addEventListener('click', openPicker);
-    slot.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openPicker(); }
-    });
-
-    input.addEventListener('click', (e) => e.stopPropagation());
-    input.addEventListener('change', () => {
-      const file = input.files && input.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = () => {
-        img.src = reader.result;
-        slot.classList.add('has-image');
-      };
-      reader.readAsDataURL(file);
-    });
+  // ---------- image upload disabled: this site is locked (read-only) ----------
+  document.querySelectorAll('.img-slot input[type="file"]').forEach(input => {
+    input.remove();
   });
+  document.querySelectorAll('.img-slot .slot-overlay').forEach(el => el.remove());
 
-  // ---------- publish: export current DOM as a standalone html file ----------
-  document.getElementById('publishBtn').addEventListener('click', () => {
-    const doc = document.documentElement.cloneNode(true);
-    doc.querySelectorAll('script').forEach((s, i) => {
-      // keep this same script so the downloaded file stays fully editable/exportable too
-    });
-    const html = '<!DOCTYPE html>\n' + doc.outerHTML;
-    const blob = new Blob([html], {type:'text/html'});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'zen-portfolio.html';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  });
+  const publishBtn = document.getElementById('publishBtn');
+  if (publishBtn) publishBtn.remove();
 </script>
 
 
